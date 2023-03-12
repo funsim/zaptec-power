@@ -11,7 +11,7 @@ from homeassistant.components.sensor import PLATFORM_SCHEMA
 from homeassistant.helpers.aiohttp_client import async_get_clientsession
 import homeassistant.helpers.config_validation as cv
 from homeassistant.helpers.entity import Entity
-from homeassistant.const import ENERGY_KILO_WATT_HOUR, POWER_KILO_WATT
+from homeassistant.const import POWER_KILO_WATT
 from homeassistant.helpers.typing import (
     ConfigType,
     DiscoveryInfoType,
@@ -64,11 +64,7 @@ class ZaptecSensor(Entity):
         self._name = f"Zaptec {self._type}"
         self._state = None
         self._available = True
-
-        if type == "total_energy":
-            self._attr_unit_of_measurement = ENERGY_KILO_WATT_HOUR
-        else:
-            self._attr_unit_of_measurement = POWER_KILO_WATT
+        self._attr_unit_of_measurement = POWER_KILO_WATT
 
 
     @property
