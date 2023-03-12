@@ -1,0 +1,11 @@
+{
+  "codeowners": ["@funsim"],
+  "config_flow": false,
+  "dependencies": [],
+  "documentation": "https://github.com/funsim/zaptec_power",
+  "domain": "zaptec_power",
+  "iot_class": "cloud_polling",
+  "name": "Zaptec Power",
+  "requirements": ["requests"],
+  "version": "1.0.0"
+}

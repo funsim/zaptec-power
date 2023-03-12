@@ -1,0 +1,16 @@
+[tool.poetry]
+name = "zaptec-power"
+version = "0.1.0"
+description = ""
+authors = ["Simon Funke <simon.funke@energima.no>"]
+readme = "README.md"
+packages = [{include = "zaptec_power"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+homeassistant = "^2023.3.3"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
